@@ -4,7 +4,7 @@ unblocking-helpers
 
 ## Why bother?
 
-Everytime you render a template the UI is blocked till the render is done. If you have {{#each}} block in your template (and then possibly another one) the render process might take a considerable amount of time.
+Everytime you render a template the UI is blocked till the render is done. If you have {{#each}} block in your template (and then possibly another one inside) the render process might take a considerable amount of time.
 
 This has become more and more problematic in our complex production app. On slower devices like old iPads sometimes the UI would be blocked for seconds leaving the poor user wondering what's going on.
 
@@ -54,7 +54,7 @@ Template.slow_template.unblockingHelpersThrottled = {
 
 And then register the helpers:
 ```javascript
-RegisterUnblockingHelpersFor(Template.benchmark_schedule);
+RegisterUnblockingHelpersFor(Template.slow_template);
 ```
 
 ## Limitations of the throttled option
