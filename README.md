@@ -35,7 +35,8 @@ $ meteor add lgandecki:unblocking-helpers
 
 Simply move your existing helpers to one of two objects:
 
-```Template.slow_template.unblockingHelpers = {
+```javascript
+Template.slow_template.unblockingHelpers = {
 	helperUsedInEachBlock: function() {
 		return []
 	},
@@ -48,7 +49,8 @@ Template.slow_template.unblockingHelpersThrottled = {
 	helperUsedInEachBlockReturningBigArray: function() {
 		return EvenBiggerCollection.find().fetch()
 	}
-};```
+}; 
+```
 
 And then register the helpers:
 
