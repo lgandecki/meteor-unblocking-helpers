@@ -53,8 +53,9 @@ Template.slow_template.unblockingHelpersThrottled = {
 ```
 
 And then register the helpers:
-
+```javascript
 RegisterUnblockingHelpersFor(Template.benchmark_schedule);
+```
 
 ## Limitations of the throttled option
 
