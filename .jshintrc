@@ -131,6 +131,7 @@
     "_": false,               // Underscore.js
     "$": false,               // jQuery
     "Kernel": false,
+    "CryptoJS": false,
     // package related global
     "RegisterUnblockingHelpersFor": true
   }
