@@ -10,7 +10,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.4');
-  api.use(['templating', 'underscore', 'reactive-var', 'dispatch:kernel', 'jparker:crypto-md5'], 'client');
+  api.use(['templating', 'underscore', 'reactive-var', 'dispatch:kernel@0.0.6', 'jparker:crypto-md5@0.1.1'], 'client');
   api.addFiles('unblocking-helpers.js', 'client');
 
   api.export('RegisterUnblockingHelpersFor', 'client');
