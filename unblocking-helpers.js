@@ -150,7 +150,7 @@ function RegisterUnblockingHelper(options, fn) {
 
                     } else {
                         template._unblockingHelpersVariables[helperIdentifier]
-                            .set(result && result.fetch ? result.fetch() : result);
+                            .set(result.fetch ? result.fetch() : result);
                     }
                 });
             }, 0);
