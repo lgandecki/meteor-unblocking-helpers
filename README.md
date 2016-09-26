@@ -3,7 +3,7 @@ unblocking-helpers
 
 ## TL;DR
 
-Offload parts of the heavy UI rendering process to an animation frame with asynced (and optionally throttled) processing to significantly speed up the user experience.
+Offload parts of the heavy UI rendering process to asynced (and optionally throttled) processing to significantly speed up the user experience.
 
 ## Why bother?
 

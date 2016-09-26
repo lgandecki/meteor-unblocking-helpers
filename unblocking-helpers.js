@@ -7,13 +7,9 @@ RegisterUnblockingHelpersFor = function(template) {
         options.template = template;
         RegisterUnblockingHelper(options, function(args, cb) {
 
-            Kernel.deferedTimeLimit = 1;
-            Kernel.frameRateLimit = 1000 / 60;
 
             var _self = this;
-            Kernel.defer(function() {
-                //it's possible to just use timeOut here:
-                // window.setTimeout(function() {
+            window.setTimeout(function() {
                 template._unblockingHelpersTrackers.push(Tracker.autorun(function() {
                     var _value;
                     if (options.throttled) {
@@ -22,7 +18,6 @@ RegisterUnblockingHelpersFor = function(template) {
                         _value = template.unblockingHelpersInfinite[options.helperName].apply(_self, args);
                     } else {
                         _value = template.unblockingHelpers[options.helperName].apply(_self, args);
-
                     }
                     cb(_value);
                 }));
